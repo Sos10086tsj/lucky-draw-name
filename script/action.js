@@ -21,15 +21,16 @@ var action = {
         start : function(){
             action.glb_name_rolling = setInterval(function(){
                 var index = action.prize.getAvailableIndex();
-                $("#js_input").val(index);
-            }, 100);
+                $("#js_input").val(users.userList[index].name);
+                $("#js_input_index").val(index);
+            }, 50);
         },
 
         //Í£Ö¹Ãû×Ö¹ö¶¯
         stop : function(){
             clearInterval(action.glb_name_rolling);
 
-            var index =  $("#js_input").val();
+            var index =  $("#js_input_index").val();
             action.prize.handleWinner(index);
         }
     },
@@ -56,10 +57,19 @@ var action = {
 
             users.winnerResult.push(winner);
 
-            console.info(users.winnerList);
-            console.info(users.winnerResult);
-
             $("#js_table_li").html($("#js_table_li").html() + '    ' + users.userList[indexInt].name);
+        },
+
+        change : function(){
+            var prizeName = $("#js_prize_menu").val();
+            var html = '';
+            for(var i in users.winnerResult){
+                var winner = users.winnerResult[i];
+                if(winner.prize == prizeName){
+                    html += '    ' + winner.name;
+                }
+            }
+            $("#js_table_li").html(html);
         }
     }
 }

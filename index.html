@@ -12,10 +12,11 @@
 			<div id="Go">
 				<fieldset class="MainBG">
 					<div id="Main">
-							<select class="QD" id="js_prize_menu"></select>
+							<select class="QD" style="font-size:36px;" id="js_prize_menu" onchange="action.prize.change();"></select>
 					</div>
-					<div style="text-align: center; margin: auto;">
-						<input id="js_input"/>
+					<div style="text-align: center; margin: 20px auto auto auto;">
+						<input id="js_input" style="height:100px;width:200px;text-align: center;font-size: 40px;"/>
+						<input id="js_input_index" type="hidden"/>
 					</div>
 					<div id="input">
 						<input id="start" name="start" type="button" value="开始(空格)"  onclick="action.start();"/>
@@ -28,7 +29,7 @@
 				<fieldset>
 					<legend> 中奖结果 </legend>
 					<ul id="tableOUT">
-						<li id="js_table_li"></li>
+						<li id="js_table_li" style="text-align: center;margin: auto;padding-top: 10px; font-size: 32px;"></li>
 					</ul>
 				</fieldset>
 			</div>

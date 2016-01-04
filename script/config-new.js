@@ -2,6 +2,7 @@ var config = {
 	//初始化配置
 	init : function(){
 		$("#js_input").val('');
+		$("#js_input_index").val('');
 
 		//初始化奖品列表
 		for(var i in prizes.prizeSettings){
