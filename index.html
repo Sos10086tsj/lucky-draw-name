@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>2016HUST宁波校友会迎春就会抽奖系统</title>
+		<link href="style/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+	
+		<div class="Top">
+			<div id="Go">
+				<fieldset class="MainBG">
+					<div id="Main">
+							<select class="QD" id="js_prize_menu"></select>
+					</div>
+					<div style="text-align: center; margin: auto;">
+						<input id="js_input"/>
+					</div>
+					<div id="input">
+						<input id="start" name="start" type="button" value="开始(空格)"  onclick="action.start();"/>
+						<input id="end" name="end" type="button" value="停止(空格)" onclick="action.stop();" />
+					</div>
+				</fieldset>
+			</div>
+
+			<div id="out">
+				<fieldset>
+					<legend> 中奖结果 </legend>
+					<ul id="tableOUT">
+						<li id="js_table_li"></li>
+					</ul>
+				</fieldset>
+			</div>
+
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+
+	<script type="text/javascript" src="config/prizes.js"></script>
+	<script type="text/javascript" src="config/users.js"></script>
+
+	<script type="text/javascript" src="script/config-new.js"></script>
+	<script type="text/javascript" src="script/action.js"></script>
+
+</html>
