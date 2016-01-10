@@ -3,6 +3,9 @@
  */
 
 var action = {
+
+    glb_start_status : 0,
+
     glb_name_rolling : setInterval( function(){
 
     },100000),
@@ -73,3 +76,17 @@ var action = {
         }
     }
 }
+
+$(function(){
+    $(document).keypress(function(event){
+        if(event.which == 13 || event.which == 32) {
+            if(action.glb_start_status == 0){
+                $("#start").click();
+                action.glb_start_status = 1;
+            }else{
+                $("#end").click();
+                action.glb_start_status = 0;
+            }
+        }
+    });
+});
